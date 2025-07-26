@@ -183,47 +183,7 @@ function scrollActive() {
 }
 
 window.addEventListener('scroll', scrollActive);
-
-function AdaptiveWindow() {
-    const ContainerOne = document.querySelector('.body-container-one');
-    const ContainerTwo = document.querySelector('.body-container-two');
-    const ContainerThree = document.querySelector('.body-container-three');
-    const ContainerTwoSubTittles = document.querySelectorAll('.body-container-two h4');
-
-    let LarguraAtual = window.innerWidth;
-    let AlturaAtual = window.innerHeight;
-
-    console.log('Altura Atual:', AlturaAtual);
-    console.log('Largura Atual:', LarguraAtual);
-
-    let ZoomContainerOne = 1.2;
-    let ZoomContainerTwo = 1;
-    let ZoomContainerThree = 1;
-
-    if (LarguraAtual <= 1000) {
-        ZoomContainerOne = LarguraAtual / 1000 * 1.2;
-    }
-
-    if (LarguraAtual <= 1100) {
-        ZoomContainerTwo = LarguraAtual / 1100;
-    }
-
-    if (LarguraAtual <= 1270) {
-        ZoomContainerThree = LarguraAtual / 1300;
-    }
-
-    if (ContainerOne) ContainerOne.style.zoom = `${ZoomContainerOne}`;
-    if (ContainerTwo) ContainerTwo.style.zoom = `${ZoomContainerTwo}`;
-    if (ContainerThree) ContainerThree.style.zoom = `${ZoomContainerThree}`;
-    ContainerTwoSubTittles.forEach(el => {
-        let ZoomContThreeDim95 = 0.85;
-        el.style.zoom = `${ZoomContThreeDim95}`;
-    });
-}
-
-window.addEventListener('load', AdaptiveWindow);
 window.addEventListener('load', atualizarData);
-window.addEventListener('resize', AdaptiveWindow);
 
 const date = new Date();
 
