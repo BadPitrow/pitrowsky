@@ -257,6 +257,7 @@ header {
 }
 .body-container-one-card h2 {
   font-family: 'Bebas Neue', sans-serif;
+  text-shadow: 2px 2px 2px black;
   margin: 0;
   padding: 0;
 }
@@ -839,13 +840,8 @@ header {
   padding: 0;
   font-family: 'Bebas Neue', sans-serif;
   color: #3f0079;
-  text-shadow: 3.5px 3.5px 0 black;
+  text-shadow: 2px 2px 2px black;
   z-index: 4;
-}
-
-.scrollActive {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 #date-calendar-cont-four {
@@ -864,13 +860,15 @@ header {
   word-spacing: 4px;
   position: absolute;
   opacity: 0;
-  transition: all 0.5s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  max-width: 300px;
   width: 100%;
   margin: 0;
   padding: 0;
+  transition: all 0.5s ease;
 }
 .calendar-tittle-cont-four.ativo {
   opacity: 1;
@@ -883,9 +881,9 @@ header {
   margin: 0;
   padding: 0;
   align-items: center;
+  gap: 350px;
   justify-content: center;
   position: absolute;
-  gap: 350px;
   z-index: 4;
 }
 .arrow-calendar-cont-four i {
@@ -893,35 +891,112 @@ header {
   align-items: center;
   justify-content: center;
   background-color: #0e001c;
+  border: 1px solid #3f0079;
   margin: 0;
   padding: 0;
-  width: 50px;
-  height: 30px;
+  width: 48px;
+  height: 28px;
   transition: all 0.5s ease;
 }
 
 .arrow-calendar-cont-four i:hover {
   cursor: pointer;
   color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .body-container-four {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   position: relative;
   z-index: 4;
-  margin: 0;
+  margin: 40px 0 0 0;
   padding: 0;
   flex-direction: column;
   user-select: none;
 }
 
 .cont-four-tittle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   font-family: 'Bebas Neue', sans-serif;
   color: #3f0079;
-  margin: 20px 0 0 0;
+  margin: 0;
+  width: 446px;
+  padding: 0 20px;
+  height: 76px;
+  border: 2px solid #3f0079;
+  background-color: #0e001c;
+}
+.cont-four-tittle h1 {
+  text-shadow: 2px 2px 2px black;
+}
+
+.hour-cont-four {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  max-width: 450px;
+  background-color: #0e001c;
+  z-index: 3;
+}
+
+.hour-cont-four button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.5px;
+  width: 100px;
+  height: 30px;
+  border: none;
+  color: black;
+  font-weight: 400;
+  background-color: #3f0079;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.hour-cont-four button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.hour-cont-four .fa-solid.fa-check {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 10%;
+}
+
+#date-calendar-cont-four {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 450px;
+  margin: 0;
+  padding: 20px;
+  position: relative;
+  z-index: 3;
+  height: 30px;
+  background-color: #0e001c;
+}
+
+#opt-eight-cont-four {
+  color: #3f0079;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+}
+
+.scrollActive {
+  opacity: 1;
+  transform: translateY(0);
 }

@@ -133,6 +133,14 @@ function ListOn() {
   }
 }
 
+function ativarElemento() {
+    console.log('Clique efetuado com sucesso');
+}
+
+window.addEventListener('click', () => {
+    if (menuAtivo) ListOn();
+});
+
 window.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".body-container-one-card");
 
@@ -249,6 +257,7 @@ console.log(DataSeisDiasDepois);
     const el = document.createElement("h2");
     el.className = "calendar-tittle-cont-four";
     el.textContent = day;
+    AddClassSabDomingo(el);
     DateCalendarContFour.appendChild(el);
 });
 
@@ -264,7 +273,7 @@ const titulosContFour = document.querySelectorAll('.calendar-tittle-cont-four');
             titulo.textContent = `Amanhã - ${DataAmanha}`;
         }
         else if (numberCalendarContFour === 2) {
-            titulo.textContent = `Depois de Amanhã - ${DataDepoisDeAmanha}`;
+            titulo.textContent = `${textContentTittle} - ${DataDepoisDeAmanha}`;
         }
         else if (numberCalendarContFour === 3) {
             titulo.textContent = `${textContentTittle} - ${DataTresDiasDepois}`;
@@ -300,6 +309,11 @@ function recarregarAoMeiaNoite() {
   }, tempoRestante);
 }
 
+function AddClassSabDomingo(el) {
+    if (el.textContent === "Sábado") el.classList.add('sabado');
+    else if (el.textContent === "Domingo") el.classList.add('domingo');
+}
+
 window.addEventListener('load', recarregarAoMeiaNoite);
 
 function activeDateInitial() {
@@ -309,4 +323,53 @@ function activeDateInitial() {
     }
 }
 
-console.log(document.querySelector('.ativo'));
+function ReturnDiaSelecionado() {
+    const tittleContFour = document.querySelectorAll('.calendar-tittle-cont-four');
+    for (let i = 0; i <= 6; i++) {
+        if (tittleContFour[i].classList.contains('ativo')) return i;
+    }
+}
+
+let blockAction = false;
+
+function SelecionarDiaPos() {
+    if (blockAction) return;
+    blockAction = true;
+    const tittleContFour = document.querySelectorAll('.calendar-tittle-cont-four');
+    for (let i = 0; i <= 6; i++) {
+        if (tittleContFour[i].classList.contains('ativo')) {
+            tittleContFour[i].style.transform = 'translateX(-50%)';
+            tittleContFour[i].classList.remove('ativo');
+            tittleContFour[(i + 1) % 7].style.transform = 'translateX(50%)';
+            setTimeout(() => {
+                tittleContFour[(i + 1) % 7].classList.add('ativo');
+                tittleContFour[(i + 1) % 7].style.transform = 'translateX(0)';
+                blockAction = false;
+            }, 500);
+            break;
+        }
+    }
+}
+
+function SelecionarDiaAnt() {
+    if (blockAction) return;
+    blockAction = true;
+    const tittleContFour = document.querySelectorAll('.calendar-tittle-cont-four');
+    for (let i = 0; i <= 6; i++) {
+        if (tittleContFour[i].classList.contains('ativo')) {
+            tittleContFour[i].style.transform = 'translateX(50%)';
+            tittleContFour[i].classList.remove('ativo');
+            tittleContFour[(i - 1 + 7) % 7].style.transform = 'translateX(-50%)';
+            setTimeout(() => {
+                tittleContFour[(i - 1 + 7) % 7].classList.add('ativo');
+                tittleContFour[(i - 1 + 7) % 7].style.transform = 'translateX(0)';
+                blockAction = false;
+            }, 500);
+            break;
+        }
+    }
+}
+
+function HourDays() {
+    
+}

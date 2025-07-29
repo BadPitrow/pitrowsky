@@ -15,8 +15,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=League+Gothic&family=Staatliches&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -42,21 +40,21 @@
     </div>
   </header>
   <div class="header-list">
-            <ul>
-                <li onclick="ativarElemento.call(this);">
-                    <h2><i class="fa-solid fa-house"></i>HOME</h2>
-                </li>
-                <li onclick="ativarElemento.call(this);">
-                    <h2><i class="fa-solid fa-file-pen"></i>CONTATO</h2>
-                </li>
-                <li onclick="ativarElemento.call(this);">
-                    <h2><i class="fa-solid fa-wrench"></i>SERVIÇOS</h2>
-                </li>
-                <li onclick="ativarElemento.call(this);">
-                    <h2><i class="fa-solid fa-coins"></i>PREÇOS</h2>
-                </li>
-            </ul>
-        </div>
+      <ul>
+          <li onclick="ativarElemento.call(this);">
+              <h2><i class="fa-solid fa-house"></i>HOME</h2>
+          </li>
+          <li onclick="ativarElemento.call(this);">
+              <h2><i class="fa-solid fa-file-pen"></i>CONTATO</h2>
+          </li>
+          <li onclick="ativarElemento.call(this);">
+              <h2><i class="fa-solid fa-wrench"></i>SERVIÇOS</h2>
+          </li>
+          <li onclick="ativarElemento.call(this);">
+              <h2><i class="fa-solid fa-coins"></i>PREÇOS</h2>
+          </li>
+      </ul>
+    </div>
     <div class="hex-grid">
     </div>
     <div class="block-local-header"></div>
@@ -170,8 +168,18 @@
     </div>
     <div id="date-calendar-cont-four">
       <div class="arrow-calendar-cont-four">
-        <i class="fa-solid fa-caret-left"></i><i class="fa-solid fa-caret-right"></i>
+        <i class="fa-solid fa-caret-left" onclick="SelecionarDiaAnt()"></i><i class="fa-solid fa-caret-right" onclick="SelecionarDiaPos()"></i>
       </div>
+    </div>
+    <div class="hour-cont-four">
+      <button id="opt-one-cont-four"><h2>20:30</h2><i class="fa-solid fa-check"></i></button>
+      <button id="opt-two-cont-four"><h2>07:00</h2><i class="fa-solid fa-check"></i></button>
+      <button id="opt-three-cont-four"><h2>08:00</h2><i class="fa-solid fa-check"></i></button>
+      <button id="opt-four-cont-four"><h2>09:00</h2><i class="fa-solid fa-check"></i></button>
+      <button id="opt-five-cont-four"><h2>10:00</h2><i class="fa-solid fa-check"></i></button>
+      <button id="opt-six-cont-four"><h2>19:00</h2><i class="fa-solid fa-check"></i></button>
+      <button id="opt-seven-cont-four"><h2>20:00</h2><i class="fa-solid fa-check"></i></button>
+      <div id="opt-eight-cont-four"><h2>Não há horários disponíveis para este dia.</h2></div>
     </div>
   </div>
   <script src="main.js"></script>
