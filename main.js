@@ -320,14 +320,16 @@ function activeDateInitial() {
     const TittleContFour = document.querySelectorAll('.calendar-tittle-cont-four');
     if (TittleContFour.length > 0) {
     TittleContFour[0].classList.add('ativo');
+    HourDays();
     }
 }
 
 function ReturnDiaSelecionado() {
     const tittleContFour = document.querySelectorAll('.calendar-tittle-cont-four');
-    for (let i = 0; i <= 6; i++) {
+    for (let i = 0; i < tittleContFour.length; i++) {
         if (tittleContFour[i].classList.contains('ativo')) return i;
     }
+    return "não encontrado"; // nenhum encontrado
 }
 
 let blockAction = false;
@@ -345,7 +347,8 @@ function SelecionarDiaPos() {
                 tittleContFour[(i + 1) % 7].classList.add('ativo');
                 tittleContFour[(i + 1) % 7].style.transform = 'translateX(0)';
                 blockAction = false;
-            }, 500);
+                HourDays();
+            }, 200);
             break;
         }
     }
@@ -363,13 +366,50 @@ function SelecionarDiaAnt() {
             setTimeout(() => {
                 tittleContFour[(i - 1 + 7) % 7].classList.add('ativo');
                 tittleContFour[(i - 1 + 7) % 7].style.transform = 'translateX(0)';
+                HourDays();
                 blockAction = false;
-            }, 500);
+            }, 200);
             break;
         }
     }
 }
 
+const oS = document.getElementById('opt-one-cont-four');
+const twS = document.getElementById('opt-two-cont-four');
+const trS = document.getElementById('opt-three-cont-four');
+const foS = document.getElementById('opt-four-cont-four');
+const fiS = document.getElementById('opt-five-cont-four');
+const siS = document.getElementById('opt-six-cont-four');
+const seS = document.getElementById('opt-seven-cont-four');
+const eiS = document.getElementById('opt-eight-cont-four');
+const hoursArray = [oS, twS, trS, foS, fiS, siS, seS, eiS];
+
+const tempoAlvo = new Date();
+tempoAlvo.setHours(20, 30, 0, 0); // 20:30:00.0000 (20:30)
+
 function HourDays() {
-    
+    let DiaSelecionado = ReturnDiaSelecionado();
+    console.log(ReturnDiaSelecionado());
+    hoursArray.forEach(h => {
+        if (h.classList.contains('desativado')) h.classList.remove('desativado');
+    })
+    const tempoAgora = new Date();
+    const tempoRes = tempoAlvo - tempoAgora;
+    const tempoResH = tempoRes / (1000 * 60 * 60);
+    const data = new Date(date);
+    data.setDate(date.getDate() + DiaSelecionado);
+    if (tempoResH <= 6 && DiaSelecionado === 0) {
+            hoursArray.forEach(h => {
+            if (h !== hoursArray[7]) h.classList.add('desativado');
+        });
+        return;
+    }
+    else if (data.getDay() <= 5 && data.getDay() >= 1) {
+        hoursArray.forEach(h => {
+            if (h !== hoursArray[0]) h.classList.add('desativado');
+        });
+    } else if (data.getDay() === 0 || data.getDay() === 6) {
+        hoursArray[0].classList.add('desativado');
+        hoursArray[7].classList.add('desativado');
+    }
 }
