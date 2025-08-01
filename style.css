@@ -143,16 +143,22 @@ header {
 .header-list li {
   list-style: none;
   background-color: rgb(5, 0, 48);
+  height: 60px;
+  display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
   color: #3f0079;
+  width: 100%;
+  max-width: 450px;
   font-family: 'Bebas Neue', sans-serif;
   transition: background-color 0.5s ease, color 0.5s ease, text-shadow 0.7s ease;
 }
 .header-list i {
-  margin: 15px;
-  min-width: 30px;
-  min-height: 30px;
+  margin: 0;
+  width: 50px;
+  position: absolute;
+  left: 20px;
 }
 .header-list li:hover {
   color: rgba(255, 255, 255, 0.7);
@@ -163,6 +169,7 @@ header {
 .header-list h2 {
   margin: 0;
   padding: 0;
+  margin: 0 60px;
 }
 .header-list.on {
     transform: translateY(80px);
@@ -895,7 +902,7 @@ header {
   margin: 0;
   padding: 0;
   width: 48px;
-  height: 28px;
+  height: 48px;
   transition: all 0.5s ease;
 }
 
@@ -942,7 +949,7 @@ header {
   gap: 20px;
   flex-wrap: wrap;
   margin: 0;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   width: 100%;
   max-width: 450px;
   background-color: #0e001c;
@@ -956,7 +963,7 @@ header {
   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 0.5px;
   width: 100px;
-  height: 30px;
+  height: 40px;
   border: none;
   color: black;
   font-weight: 400;
@@ -969,7 +976,7 @@ header {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-.hour-cont-four .fa-solid.fa-check {
+.hour-cont-four i {
   display: flex;
   align-items: center;
   position: absolute;
@@ -985,7 +992,7 @@ header {
   padding: 20px;
   position: relative;
   z-index: 3;
-  height: 30px;
+  height: 40px;
   background-color: #0e001c;
 }
 
@@ -1058,12 +1065,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 40px;
   position: relative;
   border: none;
   background-color: #3f0079;
   color: black;
-  width: 200px;
+  width: 180px;
   transition: all 0.5s ease;
 }
 
@@ -1130,4 +1137,80 @@ header {
     zoom: 0.9;
   }
 }
+
+.container-selects-cont-four input {
+  outline: none;
+  border: 1px solid #3f0079;
+  background-color: #3f0079;
+  color: black;
+  font-size: large;
+  width: 350px;
+  height: 40px;
+  margin: 0;
+  padding: 0 15px;
+  font-family: 'Bebas Neue', sans-serif;
+  transition: all 0.5s ease;
+}
+
+.container-selects-cont-four input::placeholder {
+  color: black;
+}
+
+.container-selects-cont-four input:focus::placeholder {
+  color: transparent;
+}
+
+.container-selects-cont-four input:focus {
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.container-selects-cont-four input:focus:hover {
+  color: #3f0079;
+}
+
+.container-selects-cont-four input:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #3f0079;
+}
+
+#info-selects-cont-four {
+  display: flex;
+  align-items: center;
+}
+
+#info-selects-cont-four i {
+  margin: 0 10px;
+}
+
+#agendar-cont-four {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 0 0;
+  padding: 0;
+  border: none;
+  background-color: #3f0079;
+  color: black;
+  width: 180px;
+  height: 50px;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+#agendar-cont-four:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#agendar-cont-four i {
+  margin: 0 0 0 10px;
+  font-size: 20px;
+}
+
+.ativado {
+  color: rgb(74, 74, 182) !important;
+}
+
 

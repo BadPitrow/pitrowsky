@@ -8,7 +8,7 @@ document.documentElement.style.setProperty('--spacing', `${spacingHex}px`);
 document.documentElement.style.setProperty('--hexwidth', `${hexagonWidth}px`);
 
 const totalWidth = window.innerWidth;
-const TotalRows = 100;
+const TotalRows = 150;
 const TotalHexs = Math.floor((totalWidth / (hexagonWidth + spacingHex)) + 1);
 
 // Geração da grade de hexágonos
@@ -191,9 +191,9 @@ function scrollActive() {
 }
 
 window.addEventListener('scroll', scrollActive);
-window.addEventListener('load', atualizarData);
 
 const date = new Date();
+let ArrayDatas = [];
 
 function atualizarData() {
 
@@ -289,6 +289,7 @@ const titulosContFour = document.querySelectorAll('.calendar-tittle-cont-four');
         }
     }
     activeDateInitial();
+    return ArrayDatas = [DataHoje, DataAmanha, DataDepoisDeAmanha, DataTresDiasDepois, DataQuatroDiasDepois, DataCincoDiasDepois, DataSeisDiasDepois];
 }
 
 function recarregarAoMeiaNoite() {
@@ -413,3 +414,29 @@ function HourDays() {
         hoursArray[7].classList.add('desativado');
     }
 }
+
+const SelectCreate = document.querySelectorAll('#curse-select-cont-four button');
+const buttonsSelect = [...SelectCreate, ...hoursArray];
+ArrayDatas = atualizarData();
+
+buttonsSelect.forEach(b => {
+    b.addEventListener('click', function () {
+        if (!this.classList.contains('ativado')) {
+            this.classList.add('ativado');
+            const icon = this.querySelector('i');
+            icon.classList.remove('fa-check');
+            icon.classList.add('fa-xmark');
+            const dayAtivo = ReturnDiaSelecionado();
+            if (this === oS) {
+
+            }
+        } else {
+            this.classList.remove('ativado');
+            const icon = this.querySelector('i');
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-check');
+        }
+    });
+});
+
+console.log(ArrayDatas[0]);
