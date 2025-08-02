@@ -15,8 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=League+Gothic&family=Staatliches&display=swap" rel="stylesheet" />
 
   <!-- Estilos CSS -->
-   <link rel="stylesheet" href="css/general/general.css" />
-   <link rel="stylesheet" href="css/general/hexagon.css" />
+  <link rel="stylesheet" href="css/general/general.css" />
   <link rel="stylesheet" href="css/general/keyframes.css" />
   <link rel="stylesheet" href="css/containers/contOne.css" />
   <link rel="stylesheet" href="css/containers/contTwo.css" />
@@ -60,7 +59,6 @@
     </ul>
   </div>
 
-  <div class="hex-grid"></div>
   <div class="block-local-header"></div>
 
   <div class="body-container-one">
@@ -180,14 +178,55 @@
   <div class="body-container-five">
     <div class="select-cont-five">
       <div class="title"><h2><i class="fa-solid fa-clock"></i> Agende seu horário!</h2></div>
+      <div class="select-day">
+        <i class="fa-solid fa-caret-left" onclick="AltDayAntFive()"></i><div class="days"></div></i><i class="fa-solid fa-caret-right" onclick="AltDayPosFive()"></i>
+      </div>
       <div class="select-hour">
-        <i class="fa-solid fa-caret-right"></i><div class="hours"></div><i class="fa-solid fa-caret-left"></i>
+        <div class="hours">
+          <div class="segunda">
+            <button>20:30<i class="fa-solid fa-check"></i></button>
+          </div>
+          <div class="terça">
+            <button>20:30<i class="fa-solid fa-check"></i></button>
+          </div>
+          <div class="quarta">
+            <button>20:30<i class="fa-solid fa-check"></i></button>
+          </div>
+          <div class="quinta">
+            <button>20:30<i class="fa-solid fa-check"></i></button>
+          </div>
+          <div class="sexta">
+            <button>20:30<i class="fa-solid fa-check"></i></button>
+          </div>
+          <div class="sábado">
+            <button>07:00<i class="fa-solid fa-check"></i></button>
+            <button>08:00<i class="fa-solid fa-check"></i></button>
+            <button>09:00<i class="fa-solid fa-check"></i></button>
+            <button>10:00<i class="fa-solid fa-check"></i></button>
+            <button>19:00<i class="fa-solid fa-check"></i></button>
+            <button>20:00<i class="fa-solid fa-check"></i></button>
+          </div>
+          <div class="domingo">
+            <button>07:00<i class="fa-solid fa-check"></i></button>
+            <button>08:00<i class="fa-solid fa-check"></i></button>
+            <button>09:00<i class="fa-solid fa-check"></i></button>
+            <button>10:00<i class="fa-solid fa-check"></i></button>
+            <button>19:00<i class="fa-solid fa-check"></i></button>
+            <button>20:00<i class="fa-solid fa-check"></i></button>
+          </div>
+          <h2>Esse dia está sem horários</h2>
+        </div>
+      </div>
+      <div class="list-selects">
+        <div class="list"></div>
+        <h2>Selecione algum dia</h2>
       </div>
     </div>
   </div>
 
   <!-- Scripts JS -->
-   <script src="js/general/menu.js"></script>
+  <script src="js/general/menu.js"></script>
+  <script src="js/general/load.js"></script>
   <script src="js/events/scrollActive.js"></script>
   <script src="js/general/main.js"></script>
 </body>

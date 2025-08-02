@@ -1,6 +1,6 @@
 .body-container-four {
     position: relative;
-    width: 100%;
+    width: calc(100% - 40px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,6 +10,7 @@
     color: #3f0079;
     letter-spacing: -0.75px;
     user-select: none;
+    margin: 0 20px;
 }
 
 .body-container-four h4 {

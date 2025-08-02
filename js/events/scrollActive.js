@@ -1,3 +1,6 @@
+let adicionado1 = false;
+let adicionado2 = false;
+
 function scrollActive() {
         if (adicionado1 && adicionado2) return;
 

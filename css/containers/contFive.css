@@ -5,6 +5,7 @@
     flex-direction: column;
     width: 100%;
     margin: 40px 0 0 0;
+    user-select: none;
 }
 
 .select-cont-five {
@@ -33,14 +34,14 @@
     margin: 0 5px 0 0;
 }
 
-.select-cont-five .select-hour .fa-solid.fa-caret-right {
+.select-cont-five .select-day .fa-solid.fa-caret-right {
     right: 20px;
 }
-.select-cont-five .select-hour .fa-solid.fa-caret-left {
+.select-cont-five .select-day .fa-solid.fa-caret-left {
     left: 20px;
 }
 
-.select-cont-five .select-hour {
+.select-cont-five .select-day {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,25 +50,85 @@
     height: 100px;
     border-left: 1px solid #3f0079;
     border-right: 1px solid #3f0079;
-    border-bottom: 1px solid #3f0079;
 }
 
-.select-cont-five .select-hour i {
+.select-cont-five .select-day i {
     display: flex;
     align-items: center;
     justify-content: center;
     color: #3f0079;
     position: absolute;
     font-size: 24px;
-    width: 70px;
-    height: 50px;
+    width: 55px;
+    height: 40px;
     border: 1px solid #3f0079;
     transition: all 0.5s ease;
 }
 
-.select-cont-five .select-hour i:hover {
+.select-cont-five .select-day i:hover {
     border: 1px solid rgba(255, 255, 255, 0.7);
     color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
+}
+
+.body-container-five .select-hour {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    border-left: 1px solid #3f0079;
+    border-right: 1px solid #3f0079;
+    border-bottom: 1px solid #3f0079;
+}
+
+.body-container-five .hours div,
+.body-container-five .hours h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #3f0079;
+}
+
+.body-container-five .hours button {
+    border: 1px solid #3f0079;
+    color: #3f0079;
+    width: 80px;
+    height: 40px;
+    margin: 15px 20px;
+    background-color: #0e001c;
+    transition: all 0.5s ease;
+}
+
+.body-container-five .hours button i {
+    margin: 0 0 0 5px;
+}
+
+.body-container-five .hours button:hover {
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+.select-day-cont-five {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 270px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #3f0079;
+}
+
+.selecionado {
+    color: rgba(255, 255, 255, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+.selecionado:hover {
+    color: rgba(255, 255, 255, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.7) !important;
 }
 
