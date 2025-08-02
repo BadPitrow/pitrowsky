@@ -1,0 +1,26 @@
+.body-container-one {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+  z-index: 3;
+  user-select: none;
+}
+.body-container-one-card {
+  color: #3f0079;
+}
+.body-container-one-card h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  text-shadow: 2px 2px 2px black;
+}
+.body-container-one-card h4 {
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: -0.75px;
+  margin: 0 30px;
+}
+.body-container-one-card i {
+  margin: 15px;
+}

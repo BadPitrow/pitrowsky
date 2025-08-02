@@ -1,0 +1,41 @@
+.hexagon.hover-fake2 {
+    background-color: #1f003c;
+}
+.hexagon.hover-fake1 {
+    background-color: #2f005b;
+}
+.hexagon.hover-fake {
+    background-color: #3f0079;
+}
+
+.hexagon {
+  width: var(--hexwidth);
+  height: var(--hexwidth); /* altura proporcional para hexágono regular */
+  background: #1b0034;
+  clip-path: polygon(
+    50% 0%, 
+    100% 25%, 
+    100% 75%, 
+    50% 100%, 
+    0% 75%, 
+    0% 25%
+  );
+  margin: 0 var(--spacing);
+  transition: background-color 0.5s ease;
+  overflow: hidden;
+}
+.hex-grid {
+  display: flex;
+  flex-direction: column; 
+  width: 100vw;
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+}
+
+.hex-row {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  overflow: hidden;
+}

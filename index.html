@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meu Portfólio</title>
 
+  <!-- Ícones Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&family=Open+Sans:wght@300..800&family=Montserrat:wght@100..900&family=Lato:wght@100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <!-- Fontes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&family=Open+Sans:wght@300..800&family=Montserrat:wght@100..900&family=Lato:wght@100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=League+Gothic&family=Staatliches&display=swap" rel="stylesheet" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=League+Gothic&family=Staatliches&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+  <!-- Estilos CSS -->
+   <link rel="stylesheet" href="css/general/general.css" />
+   <link rel="stylesheet" href="css/general/hexagon.css" />
+  <link rel="stylesheet" href="css/general/keyframes.css" />
+  <link rel="stylesheet" href="css/containers/contOne.css" />
+  <link rel="stylesheet" href="css/containers/contTwo.css" />
+  <link rel="stylesheet" href="css/containers/contThree.css" />
+  <link rel="stylesheet" href="css/containers/contFour.css" />
+  <link rel="stylesheet" href="css/containers/contFive.css" />
+  <link rel="stylesheet" href="css/containers/contSix.css" />
+  <link rel="stylesheet" href="css/general/media.css" />
 </head>
 <body>
   <header>
     <div class="header-container">
-      <div class="option-one">
-        <h2>HOME</h2>
-      </div>
-      <div class="option-two">
-        <h2>CONTATO</h2>
-      </div>
-      <div class="option-three">
-        <h2>SERVIÇOS</h2>
-      </div>
+      <div class="option-one"><h2>HOME</h2></div>
+      <div class="option-two"><h2>CONTATO</h2></div>
+      <div class="option-three"><h2>SERVIÇOS</h2></div>
     </div>
     <div class="header-container-one">
       <div class="header-menu">
@@ -39,118 +42,116 @@
       </div>
     </div>
   </header>
+
   <div class="header-list">
-      <ul>
-          <li onclick="ativarElemento.call(this);">
-              <h2><i class="fa-solid fa-house"></i>HOME</h2>
-          </li>
-          <li onclick="ativarElemento.call(this);">
-              <h2><i class="fa-solid fa-file-pen"></i>CONTATO</h2>
-          </li>
-          <li onclick="ativarElemento.call(this);">
-              <h2><i class="fa-solid fa-wrench"></i>SERVIÇOS</h2>
-          </li>
-          <li onclick="ativarElemento.call(this);">
-              <h2><i class="fa-solid fa-coins"></i>PREÇOS</h2>
-          </li>
-      </ul>
-    </div>
-    <div class="hex-grid">
-    </div>
-    <div class="block-local-header"></div>
-    <div class="body-container-one">
-      <div class="body-container-one-card">
-        <h2><i class="fa-solid fa-door-open"></i>Seja bem-vindo!</h2>
-        <h4>Este é o meu espaço criativo, pensado com carinho para mostrar como enfrento e<br>
-            resolvo meus próprios desafios. E o desafio da vez é:<br>
-            Como criar um portfólio que realmente chame a sua atenção?<br>
-            Para isso, desenvolvi este site completo, feito com dedicação total — cada detalhe<br>
-            foi pensado para refletir o meu esforço e aprendizado.<br><br>
+    <ul>
+      <li onclick="ativarElemento.call(this);">
+        <i class="fa-solid fa-house"></i><h2>HOME</h2>
+      </li>
+      <li onclick="ativarElemento.call(this);">
+        <i class="fa-solid fa-file-pen"></i><h2>CONTATO</h2>
+      </li>
+      <li onclick="ativarElemento.call(this);">
+        <i class="fa-solid fa-wrench"></i><h2>SERVIÇOS</h2>
+      </li>
+      <li onclick="ativarElemento.call(this);">
+        <i class="fa-solid fa-coins"></i><h2>PREÇOS</h2>
+      </li>
+    </ul>
+  </div>
 
-            Aqui, você poderá realizar pagamentos, fazer login ou se cadastrar, visualizar<br>
-            seus agendamentos e conferir com clareza os dias da semana disponíveis...<br>
-            Disponíveis para quê?<br>
-            Para você reservar uma hora de aula comigo e descobrir, passo a passo, como<br>
-            criei este site do zero — sem ajuda de ninguém, sem pagar cursos, sem assistir<br>
-            tutoriais e sem sequer ter me formado na área.<br><br>
+  <div class="hex-grid"></div>
+  <div class="block-local-header"></div>
 
-            Eu sei que criar um bom portfólio pode ser um grande desafio. Como diz o ditado:<br>
-            “Com grandes problemas, vêm grandes responsabilidades.”<br>
-            Mas este site é, talvez, a prova de que esse problema encontrou uma solução.<br>
-            Espero que você aproveite a experiência!<br>
-            Ficarei muito feliz em saber o que achou — compartilhe sua opinião.<br>
-            Divirta-se!</h4>
-      </div>
+  <div class="body-container-one">
+    <div class="body-container-one-card">
+      <h2><i class="fa-solid fa-door-open"></i>Seja bem-vindo!</h2>
+      <h4>
+        Este é o meu espaço criativo, pensado com carinho para mostrar como enfrento e<br>
+        resolvo meus próprios desafios. E o desafio da vez é:<br>
+        Como criar um portfólio que realmente chame a sua atenção?<br>
+        Para isso, desenvolvi este site completo, feito com dedicação total — cada detalhe<br>
+        foi pensado para refletir o meu esforço e aprendizado.<br><br>
+
+        Aqui, você poderá realizar pagamentos, fazer login ou se cadastrar, visualizar<br>
+        seus agendamentos e conferir com clareza os dias da semana disponíveis...<br>
+        Disponíveis para quê?<br>
+        Para você reservar uma hora de aula comigo e descobrir, passo a passo, como<br>
+        criei este site do zero — sem ajuda de ninguém, sem pagar cursos, sem assistir<br>
+        tutoriais e sem sequer ter me formado na área.<br><br>
+
+        Eu sei que criar um bom portfólio pode ser um grande desafio. Como diz o ditado:<br>
+        “Com grandes problemas, vêm grandes responsabilidades.”<br>
+        Mas este site é, talvez, a prova de que esse problema encontrou uma solução.<br>
+        Espero que você aproveite a experiência!<br>
+        Ficarei muito feliz em saber o que achou — compartilhe sua opinião.<br>
+        Divirta-se!
+      </h4>
     </div>
-    <div class="body-container-two">
-      <div class="card-one-container-two">
-        <h2><i class="fa-solid fa-coins"></i>Preços</h2>
-        <h4>Consulte os preços de</h4>
-        <h4>todos os tipos de</h4>
-        <h4>serviços disponíveis</h4>
-        <h4>através do menu</h4>
-      </div>
-      <div class="card-two-container-two">
-        <h2><i class="fa-solid fa-wrench"></i>Serviços</h2>
-        <h4>Veja todos os</h4>
-        <h4>serviços disponíveis</h4>
-        <h4>aqui ou acesse</h4>
-        <h4>através do menu</h4>
-      </div>
-      <div class="card-three-container-two">
-        <h2><i class="fa-solid fa-file-pen"></i>Contato</h2>
-        <h4>Sua opinião é</h4>
-        <h4>importante, entre</h4>
-        <h4>em contato e me diga</h4>
-        <h4>o que achou da página?</h4>
-      </div>
-      <div class="card-four-container-two">
-        <h2><i class="fa-solid fa-unlock"></i></i>Jornada</h2>
-        <h4>Veja algumas</h4>
-        <h4>das empresas que</h4>
-        <h4>trabalhei e o tempo</h4>
-        <h4>de experiência</h4>
-      </div>
+  </div>
+
+  <div class="body-container-two">
+    <div class="card-one-container-two">
+      <h2><i class="fa-solid fa-coins"></i>Preços</h2>
+      <h4>Consulte os preços de</h4>
+      <h4>todos os tipos de</h4>
+      <h4>serviços disponíveis</h4>
+      <h4>através do menu</h4>
     </div>
-    <div class="body-container-three">
-      <div class="jornada-cont-three">
-        <h2 class="container-three-tittle">Experiência Profissional</h2>
-        <div class="linha-carreira-cont-three">
-          <div class="linha-cont-three"></div>
-        </div>
-        <div class="bolinhas-cont-three">
-          <div class="bolinha-one-cont-three"></div>
-          <div class="bolinha-two-cont-three"></div>
+    <div class="card-two-container-two">
+      <h2><i class="fa-solid fa-wrench"></i>Serviços</h2>
+      <h4>Veja todos os</h4>
+      <h4>serviços disponíveis</h4>
+      <h4>aqui ou acesse</h4>
+      <h4>através do menu</h4>
+    </div>
+    <div class="card-three-container-two">
+      <h2><i class="fa-solid fa-file-pen"></i>Contato</h2>
+      <h4>Sua opinião é</h4>
+      <h4>importante, entre</h4>
+      <h4>em contato e me diga</h4>
+      <h4>o que achou da página?</h4>
+    </div>
+    <div class="card-four-container-two">
+      <h2><i class="fa-solid fa-unlock"></i>Jornada</h2>
+      <h4>Veja algumas</h4>
+      <h4>das empresas que</h4>
+      <h4>trabalhei e o tempo</h4>
+      <h4>de experiência</h4>
+    </div>
+  </div>
+
+  <div class="body-container-three">
+    <div class="jornada-cont-three">
+      <h2 class="container-three-title">Experiência Profissional</h2>
+      <div class="linha-carreira-cont-three">
+        <div class="linha-cont-three"></div>
+      </div>
+      <div class="bolinhas-cont-three">
+        <div class="bolinha-one-cont-three"></div>
+        <div class="bolinha-two-cont-three"></div>
       </div>
       <div class="cards-cont-three">
         <div class="card-one-cont-three">
           <h3 class="empresa-cont-three">Blessed Panther</h3>
           <h3 class="cargo-cont-three">Diretor Executivo</h3>
-          <h5 class="reqs-cont-three">
+          <div class="reqs-cont-three">
             <ul>
-              <li>
-                Desenvolvedor
-          </li>
-          <li>
-            Administrador
-          </li>
-        </ul>
-      </h5>
+              <li>Desenvolvedor</li>
+              <li>Administrador</li>
+            </ul>
+          </div>
           <div class="linha-card-one-cont-three"></div>
         </div>
         <div class="card-two-cont-three">
           <h3 class="empresa-cont-three">LBR ENGENHARIA</h3>
           <h3 class="cargo-cont-three">Auxiliar técnico</h3>
-          <h5 class="reqs-cont-three">
+          <div class="reqs-cont-three">
             <ul>
-              <li>
-                VBA
-          </li>
-          <li>
-            Análise de dados
-          </li>
-        </ul>
-      </h5>
+              <li>VBA</li>
+              <li>Análise de dados</li>
+            </ul>
+          </div>
           <div class="linha-card-two-cont-three"></div>
         </div>
         <div class="data-card-one-cont-three">
@@ -162,37 +163,32 @@
       </div>
     </div>
   </div>
+
   <div class="body-container-four">
-    <div class="cont-four-tittle">
-      <h1>Agende seu horário!</h1>
-    </div>
-    <div id="date-calendar-cont-four">
-      <div class="arrow-calendar-cont-four">
-        <i class="fa-solid fa-caret-left" onclick="SelecionarDiaAnt()"></i><i class="fa-solid fa-caret-right" onclick="SelecionarDiaPos()"></i>
+    <h2>Pronto para dar o próximo passo?</h2>
+    <h4>
+      Agora você pode agendar suas aulas particulares diretamente no agendador abaixo.<br><br>
+      Se busca ainda mais exclusividade, clique em "Serviços" no menu e conheça todas as opções disponíveis.<br><br>
+      Cada aula custa <button><i class="fa-solid fa-coins"></i> R$ 50,00</button>, com duração de <button>uma hora</button>, realizada de forma totalmente remota e personalizada. O horário escolhido marca o início da sua aula.<br><br>
+      <button>Em apenas dez horas, você poderá aprender a criar sites como este.<button></button><br><br>
+      As aulas não incluem certificado, mas garantem um aprendizado prático e direto ao ponto.<br><br>
+      E mais: no menu <button><i class="fa-solid fa-wrench"></i> Serviços</button> você também pode adquirir um site completo como este, com pagamento feito diretamente no site.<br><br>
+      Explore, aprenda e transforme suas ideias em realidade!
+    </h4>
+  </div>
+
+  <div class="body-container-five">
+    <div class="select-cont-five">
+      <div class="title"><h2><i class="fa-solid fa-clock"></i> Agende seu horário!</h2></div>
+      <div class="select-hour">
+        <i class="fa-solid fa-caret-right"></i><div class="hours"></div><i class="fa-solid fa-caret-left"></i>
       </div>
     </div>
-    <div class="hour-cont-four">
-      <button id="opt-one-cont-four"><h2>20:30</h2><i class="fa-solid fa-check"></i></button>
-      <button id="opt-two-cont-four"><h2>07:00</h2><i class="fa-solid fa-check"></i></button>
-      <button id="opt-three-cont-four"><h2>08:00</h2><i class="fa-solid fa-check"></i></button>
-      <button id="opt-four-cont-four"><h2>09:00</h2><i class="fa-solid fa-check"></i></button>
-      <button id="opt-five-cont-four"><h2>10:00</h2><i class="fa-solid fa-check"></i></button>
-      <button id="opt-six-cont-four"><h2>19:00</h2><i class="fa-solid fa-check"></i></button>
-      <button id="opt-seven-cont-four"><h2>20:00</h2><i class="fa-solid fa-check"></i></button>
-      <div id="opt-eight-cont-four"><h2>Não há horários disponíveis para este dia.</h2></div>
-    </div>
-    <form class="container-selects-cont-four">
-      <div id="tittle-selects-cont-four" class="desativado"><h2>Dias selecionados</h2></div>
-      <div id="selects-cont-four" class="desativado"></div><br>
-      <div id="no-selects-cont-four"><h2>Nenhum dia selecionado</h2></div><br>
-      <div id="tittle-curse-select-cont-four"><h2>O que você gostaria de aprender a criar?</h2></div>
-      <div id="curse-select-cont-four"><button type="button"><h2>Automatizações</h2><i class="fa-solid fa-check"></i></button><button type="button"><h2>Sites</h2><i class="fa-solid fa-check"></i></button></div><br>
-      <div id="info-selects-cont-four"><i class="fa-solid fa-address-book"></i><h2>Digite seu nome e meio de contato</h2></div>
-      <input id="name-area-cont-four" type="text" placeholder="Digite seu nome..."/>
-      <input id="contact-area-cont-four" type="text" placeholder="Contato..."/>
-      <button id="agendar-cont-four" type="submit"><h2>Agendar</h2><i class="fa-regular fa-calendar-check"></i></button>
-    </form>
   </div>
-  <script src="main.js"></script>
+
+  <!-- Scripts JS -->
+   <script src="js/general/menu.js"></script>
+  <script src="js/events/scrollActive.js"></script>
+  <script src="js/general/main.js"></script>
 </body>
 </html>

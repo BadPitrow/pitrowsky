@@ -1,0 +1,33 @@
+.body-container-four {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    color: #3f0079;
+    letter-spacing: -0.75px;
+    user-select: none;
+}
+
+.body-container-four h4 {
+    max-width: 700px;
+}
+
+.body-container-four h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    text-shadow: 2px 2px 2px black;
+    margin: 30px 0;
+}
+
+.body-container-four button {
+    border: none;
+    background-color: #3f0079;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.body-container-four button i {
+    zoom: 0.9
+}
