@@ -33,6 +33,7 @@ const DataTresDiasDepois = diasFuturos[1];
 const DataQuatroDiasDepois = diasFuturos[2];
 const DataCincoDiasDepois = diasFuturos[3];
 const DataSeisDiasDepois = diasFuturos[4];
+const ArrayDatas = [DataHoje, DataAmanha, DataDepoisDeAmanha, DataTresDiasDepois, DataQuatroDiasDepois, DataCincoDiasDepois, DataSeisDiasDepois];
 
 const DiasDaSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
 const DiasGerados = [];
@@ -184,6 +185,8 @@ function CheckTime(h, m) {
     return rest >= 3;
 }
 
+let blockedListCreating = false;
+
 function SelectDateAndHour() {
     const icon = this.querySelector('i');
     if (icon.classList.contains('fa-check')) {
@@ -195,10 +198,52 @@ function SelectDateAndHour() {
         icon.classList.add('fa-check');
         this.classList.remove('selecionado');
     }
+    blockedListCreating = false;
 }
 
 ArraySemanaC5.forEach(days => {
     days.forEach(d => {
+        d.addEventListener('click', AgendaList);
         d.addEventListener('click', SelectDateAndHour);
     });
 });
+
+let listCreates = [];
+
+function AgendaList() {
+    if (blockedListCreating) return;
+    blockedListCreating = true;
+
+    const noSelect = document.querySelector('.body-container-five .list-selects .h2');
+
+    if (this.querySelector('i').classList.contains('fa-check')) {
+        const createVisualDate = document.createElement('h2');
+        createVisualDate.textContent = `${ArrayDatas[DayPresMomentFive]}`;
+        createVisualDate.className = 'visualDate';
+        const list = document.querySelector('.body-container-five .list-selects .list');
+        list.appendChild(createVisualDate);
+        const textVisualHour = this.textContent;
+        const createVisualHour = document.createElement('h2');
+        createVisualHour.textContent = `${textVisualHour}`;
+        createVisualHour.className = 'visualHour';
+        list.appendChild(createVisualHour);
+        listCreates.push(`${this.textContent} ${ArrayDatas[DayPresMomentFive]}`);
+        if (!noSelect.classList.contains('desativado')) noSelect.classList.add('desativado');
+    } else {
+        const datesList = document.querySelectorAll('.body-container-five .list-selects .list .visualDate');
+        const hoursList = document.querySelectorAll('.body-container-five .list-selects .list .visualHour');
+
+        const IndexThis = listCreates.findIndex(item => item === `${this.textContent} ${ArrayDatas[DayPresMomentFive]}`);
+        console.log(`Array hours: ${hoursList}`);
+        console.log(`Array dates: ${datesList}`);
+        console.log(`Array listCreates: ${listCreates}`);
+        console.log(`Index: ${IndexThis}`);
+        hoursList[IndexThis].remove();
+        datesList[IndexThis].remove();
+        listCreates = listCreates.filter(item => item !== `${this.textContent} ${ArrayDatas[DayPresMomentFive]}`);
+
+        if (listCreates.length === 0) {
+            noSelect.classList.remove('desativado');
+        }
+    }
+}

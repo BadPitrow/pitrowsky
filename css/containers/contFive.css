@@ -82,6 +82,14 @@
     border-bottom: 1px solid #3f0079;
 }
 
+.body-container-five .hours div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    gap: 10px;
+}
+
 .body-container-five .hours div,
 .body-container-five .hours h2 {
     display: flex;
@@ -97,7 +105,6 @@
     color: #3f0079;
     width: 80px;
     height: 40px;
-    margin: 15px 20px;
     background-color: #0e001c;
     transition: all 0.5s ease;
 }
@@ -130,5 +137,55 @@
 .selecionado:hover {
     color: rgba(255, 255, 255, 0.7) !important;
     border: 1px solid rgba(255, 255, 255, 0.7) !important;
+}
+
+.body-container-five .list-selects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    border-left: 1px solid #3f0079;
+    border-right: 1px solid #3f0079;
+    border-bottom: 1px solid #3f0079;
+}
+
+.body-container-five .list-selects .list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: 'Bebas Neue', sans-serif;
+    width: 100%;
+    gap: 10px;
+    max-width: 450px;
+    color: #3f0079;
+}
+
+.body-container-five .list-selects .list .visualDate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #3f0079;
+    padding: 5px 10px;
+    width: 200px;
+}
+
+.body-container-five .list-selects .list .visualHour {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #3f0079;
+    padding: 5px 10px;
+    width: 80px;
+}
+
+.body-container-five .list-selects h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #3f0079;
 }
 
