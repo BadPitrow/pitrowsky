@@ -1,34 +1,27 @@
 @media (max-width: 351px) {
   .body-container-five,
   .body-container-two {
-    zoom: 0.55;
+    zoom: 0.6;
   }
 }
 @media (min-width: 351px) and (max-width: 401px) {
   .body-container-five,
   .body-container-two {
-    zoom: 0.65;
+    zoom: 0.7;
   }
 }
 
 @media (min-width: 401px) and (max-width: 451px) {
   .body-container-five,
   .body-container-two {
-    zoom: 0.75;
+    zoom: 0.82;
   }
 }
 
 @media (min-width: 451px) and (max-width: 501px) {
   .body-container-five,
   .body-container-two {
-    zoom: 0.85;
-  }
-}
-
-@media (min-width: 501px) and (max-width: 551px) {
-  .body-container-five,
-  .body-container-two {
-    zoom: 0.95;
+    zoom: 0.92;
   }
 }
 
@@ -61,152 +54,132 @@
   .card-one-cont-three {
     zoom: 0.6;
     margin: 100px 0 0 0;
-    left: 3%;
+    left: 7%;
   }
   .card-two-cont-three {
     zoom: 0.6;
     margin: 100px 0 0 0;
-    right: 3%;
+    right: 7%;
   }
   .data-card-one-cont-three {
     zoom: 0.6;
-    right: 6%;
+    right: 10%;
   }
-    .data-card-two-cont-three {
+  .data-card-two-cont-three {
     zoom: 0.6;
-    left: 6%;
+    left: 10%;
   }
 }
 @media (min-width: 351px) and (max-width: 401px) {
   .card-one-cont-three {
     zoom: 0.65;
     margin: 90px 0 0 0;
-    left: 4%;
+    left: 9%;
   }
   .card-two-cont-three {
     zoom: 0.65;
     margin: 90px 0 0 0;
-    right: 4%;
+    right: 9%;
   }
   .data-card-one-cont-three {
     zoom: 0.65;
-    right: 7%;
+    right: 12%;
   }
     .data-card-two-cont-three {
     zoom: 0.65;
-    left: 7%;
+    left: 12%;
   }
 }
 @media (min-width: 401px) and (max-width: 451px) {
   .card-one-cont-three {
     zoom: 0.7;
     margin: 80px 0 0 0;
-    left: 5.5%;
+    left: 12%;
   }
   .card-two-cont-three {
     zoom: 0.7;
     margin: 80px 0 0 0;
-    right: 5.5%;
+    right: 12%;
   }
   .data-card-one-cont-three {
     zoom: 0.7;
-    right: 8.5%;
+    right: 16%;
   }
     .data-card-two-cont-three {
     zoom: 0.7;
-    left: 8.5%;
+    left: 16%;
   }
 }
 @media (min-width: 451px) and (max-width: 501px) {
   .card-one-cont-three {
     zoom: 0.8;
     margin: 60px 0 0 0;
-    left: 5.5%;
+    left: 12%;
   }
   .card-two-cont-three {
     zoom: 0.8;
     margin: 60px 0 0 0;
-    right: 5.5%;
+    right: 12%;
   }
   .data-card-one-cont-three {
     zoom: 0.8;
-    right: 8.5%;
+    right: 16%;
   }
     .data-card-two-cont-three {
     zoom: 0.8;
-    left: 8.5%;
+    left: 16%;
   }
 }
 @media (min-width: 501px) and (max-width: 551px) {
   .card-one-cont-three {
     zoom: 0.9;
     margin: 30px 0 0 0;
-    left: 6%;
+    left: 10%;
   }
   .card-two-cont-three {
     zoom: 0.9;
     margin: 30px 0 0 0;
-    right: 6%;
+    right: 10%;
   }
   .data-card-one-cont-three {
     zoom: 0.9;
-    right: 8%;
+    right: 12%;
   }
     .data-card-two-cont-three {
     zoom: 0.9;
-    left: 8%;
+    left: 12%;
   }
 }
 @media (min-width: 551px) and (max-width: 601px) {
   .card-one-cont-three {
     zoom: 0.9;
     margin: 50px 0 0 0;
-    left: 8%;
+    left: 15%;
   }
   .card-two-cont-three {
     zoom: 0.9;
     margin: 50px 0 0 0;
-    right: 8%;
+    right: 15%;
   }
   .data-card-one-cont-three {
     zoom: 0.9;
-    right: 10%;
+    right: 15%;
   }
     .data-card-two-cont-three {
     zoom: 0.9;
-    left: 10%;
+    left: 15%;
   }
 }
 @media (min-width: 601px) and (max-width: 651px) {
   .card-one-cont-three {
     zoom: 1;
     margin: 20px 0 0 0;
-    left: 9%;
+    left: 14%;
   }
   .card-two-cont-three {
     zoom: 1;
     margin: 20px 0 0 0;
-    right: 9%;
-  }
-  .data-card-one-cont-three {
-    zoom: 1;
-    right: 12%;
-  }
-    .data-card-two-cont-three {
-    zoom: 1;
-    left: 12%;
-  }
-}
-@media (min-width: 651px) and (max-width: 701px) {
-  .card-one-cont-three {
-    zoom: 1;
-    margin: 20px 0 0 0;
-    left: 12%;
-  }
-  .card-two-cont-three {
-    zoom: 1;
-    margin: 20px 0 0 0;
-    right: 12%;
+    right: 14%;
   }
   .data-card-one-cont-three {
     zoom: 1;
@@ -217,16 +190,16 @@
     left: 16%;
   }
 }
-@media (min-width: 701px) and (max-width: 751px) {
+@media (min-width: 651px) and (max-width: 701px) {
   .card-one-cont-three {
     zoom: 1;
     margin: 20px 0 0 0;
-    left: 15%;
+    left: 16%;
   }
   .card-two-cont-three {
     zoom: 1;
     margin: 20px 0 0 0;
-    right: 15%;
+    right: 16%;
   }
   .data-card-one-cont-three {
     zoom: 1;
@@ -237,27 +210,7 @@
     left: 19%;
   }
 }
-@media (min-width: 751px) and (max-width: 801px) {
-  .card-one-cont-three {
-    zoom: 1;
-    margin: 20px 0 0 0;
-    left: 17%;
-  }
-  .card-two-cont-three {
-    zoom: 1;
-    margin: 20px 0 0 0;
-    right: 17%;
-  }
-  .data-card-one-cont-three {
-    zoom: 1;
-    right: 21%;
-  }
-    .data-card-two-cont-three {
-    zoom: 1;
-    left: 21%;
-  }
-}
-@media (min-width: 801px) and (max-width: 851px) {
+@media (min-width: 701px) and (max-width: 751px) {
   .card-one-cont-three {
     zoom: 1;
     margin: 20px 0 0 0;
@@ -277,7 +230,7 @@
     left: 22%;
   }
 }
-@media (min-width: 851px) and (max-width: 951px) {
+@media (min-width: 751px) and (max-width: 801px) {
   .card-one-cont-three {
     zoom: 1;
     margin: 20px 0 0 0;
@@ -295,6 +248,46 @@
     .data-card-two-cont-three {
     zoom: 1;
     left: 24%;
+  }
+}
+@media (min-width: 801px) and (max-width: 851px) {
+  .card-one-cont-three {
+    zoom: 1;
+    margin: 20px 0 0 0;
+    left: 23%;
+  }
+  .card-two-cont-three {
+    zoom: 1;
+    margin: 20px 0 0 0;
+    right: 23%;
+  }
+  .data-card-one-cont-three {
+    zoom: 1;
+    right: 26%;
+  }
+    .data-card-two-cont-three {
+    zoom: 1;
+    left: 26%;
+  }
+}
+@media (min-width: 851px) and (max-width: 951px) {
+  .card-one-cont-three {
+    zoom: 1;
+    margin: 20px 0 0 0;
+    left: 24%;
+  }
+  .card-two-cont-three {
+    zoom: 1;
+    margin: 20px 0 0 0;
+    right: 24%;
+  }
+  .data-card-one-cont-three {
+    zoom: 1;
+    right: 27%;
+  }
+    .data-card-two-cont-three {
+    zoom: 1;
+    left: 27%;
   }
 }
 @media (min-width: 951px) and (max-width: 1051px) {
